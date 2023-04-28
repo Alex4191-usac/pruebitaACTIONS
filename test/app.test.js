@@ -10,4 +10,11 @@ describe('cuando se maneje los usuarios', () => {
             .expect(200)
             .expect('Content-Type', /application\/json/)
     })
+
+    test('cuando llamemos al usuario mediantet GET-200', async () => {
+        await api
+            .get('/api/v1/user/50')
+            .expect(400)
+            .expect('Content-Type', /application\/json/)
+    })
 })
