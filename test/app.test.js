@@ -26,4 +26,19 @@ describe('cuando se maneje los usuarios', () => {
             .expect(200)
             .expect('Content-Type', /application\/json/)
     })
+    test('cuando llamemos al usuario mediante un nombre retorna un codigo 200', async () => {
+        await api
+            .get('/api/v1/user/Brandon')
+            .expect(200)
+            .expect('Content-Type', /application\/json/)
+    })
+
+    test('cuando llamemos al usuario mediante un id retorna un codigo 200', async () => {
+        await api
+            .get('/api/v1/user/')
+            .expect(400)
+            .expect('Content-Type', /application\/json/)
+    })
+})
+
 })
