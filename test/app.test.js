@@ -40,5 +40,3 @@ describe('cuando se maneje los usuarios', () => {
             .expect('Content-Type', /application\/json/)
     })
 })
-
-})
