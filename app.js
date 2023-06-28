@@ -18,5 +18,12 @@ app.get('/api/v1/user/:id', (req, res) =>{
     }
     res.json({ id, username:'SiSaleAyd1'})
 })
+app.get('/api/v1/user/:name', (req, res) =>{
+    const { name } = req.params
+    if(!name) {
+        res.status(400).json({error: 'name is required'})
+    }
+    res.json({ id, username:'SiSaleAyd1'})
+})
 
 module.exports = app
